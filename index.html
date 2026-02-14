@@ -12,9 +12,15 @@
          <h2>Postać</h2>
          <div>
             <span id="guild">Brak przyn.</span>
-            <span id="lvl">0</span>
+            <div>
+               <span>Poziom </span>
+               <span id="lvl">0</span>
+            </div>
             <span id="Magic">Magia</span>
-            <span id="circleOfMagic">0</span>
+            <div>
+               <span>Krąg </span>
+               <span id="circleOfMagic">0</span>
+            </div>
             <span id="experience">Doświadczenie</span>
             <span id="expPoints">0</span>
             <span id="nextLvl">Nast. Poziom</span>
@@ -82,11 +88,50 @@
             <span id="TrophyTakingPoints">-</span>
          </div>
       </div>
-    </div>
-      
-    <div id="results">
+      <div class="statsLabel AddLvl">
+            <button class="AddButton">Zwiększ Poziom Postaci +1</button>
+            <button class="AddButton">Zwiększ Poziom Postaci +5</button>
+      </div>
+      <div class="statsLabel Uppgrading">
+         <h2>Ulepszenia</h2>
+         <div>
+            <button class="AddButton">Siła +1 (1 pkt. umiejętności)</button>
+            <button class="AddButton">Siła +5 (5 pkt. umiejętności)</button>
+            <button class="AddButton">Zręczność +1 (1 pkt. umiejętności)</button>
+            <button class="AddButton">Zręczność +5 (1 pkt. umiejętności)</button>
+            <button class="AddButton">Mana +1 (1 pkt. umiejętności)</button>
+            <button class="AddButton">Mana +5 (5 pkt. umiejętności)</button>
+         </div>
+         <div>
+            <button class="AddButton">Broń jednoręczna +1% (1 pkt. umiejętności)</button>
+            <button class="AddButton">Broń jednoręczna +5% (5 pkt. umiejętności)</button>
+            <button class="AddButton">Broń dwuręczna +1% (1 pkt. umiejętności)</button>
+            <button class="AddButton">Broń dwuręczna +5% (5 pkt. umiejętności)</button>
+            <button class="AddButton">Łuk +1% (1 pkt. umiejętności)</button>
+            <button class="AddButton">Łuk +5% (5 pkt. umiejętności)</button>
+            <button class="AddButton">Kusza +1% (1 pkt. umiejętności)</button>
+            <button class="AddButton">Kusza +5% (5 pkt. umiejętności)</button>
+         </div>
+     </div>
+     <div class="equipment statsLabel">
+      <h2>Broń</h2>
+         <button class="AddButton">Brón jednoręczna</button>
+         <button class="AddButton">Brón dwuręczna</button>
+         <button class="AddButton">Łuk</button>
+         <button class="AddButton">Kusza</button>
 
-    </div>
+         <div class="hidden" id="weaponList">
+            <button class="AddButton" id="backButton">Wróć</button>
+            <div id="weaponItems"></div>
+         </div>
+     </div>
+     <div class="results statsLabel">
+      <h2>Podsumowanie</h2>
+         <button class="AddButton">Przeciwnik:</button>
+     </div>
+
+   </div>
+      
     <script src="script.js"></script>
  </body>
  </html>

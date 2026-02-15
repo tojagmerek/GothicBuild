@@ -42,7 +42,7 @@ body {
     background-color: rgba(0,0,0,0.7);
 }
 
-.statsLabel div {
+.statsLabel > div {
     display: grid;
     grid-template-columns: 1.8fr 1fr;
 }

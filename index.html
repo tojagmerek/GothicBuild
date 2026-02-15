@@ -37,11 +37,11 @@
             <span id="Dexterity">Zręczność</span>
             <span id="DexterityPoints">10</span>
             <span id="Mana">Mana</span>
-            <span id="ManaPoints">10/10</span>
+            <span id="ManaPoints">10</span>
             <span id="Health">Punkty trafień</span>
             <span id="HealthPoints">40/40</span>
          </div>
-      </div>
+      </div class="nowrap">
       <div id="Protection" class="statsLabel">
          <h2>Ochrona</h2>
          <div>
@@ -59,13 +59,29 @@
          <h2>Umiejętności</h2>
          <div>
             <span id="oneHanded">Br. jednoręczna</span>
-            <span id="oneHandedPoints">Zielony  10%</span>
+            <div>
+               <span>Zielony </span>
+               <span id="oneHandedPoints">10</span>  
+               <span>%</span>
+            </div>
             <span id="twoHanded">Br. dwuręczna</span>
-            <span id="twoHandedPoints">Zielony  10%</span>
-            <span id="Bows">Łuki</span>
-            <span id="BowsPoints">Zielony  10%</span>
-            <span id="Crossbows">Kusze</span>
-            <span id="CrossbowsPoints">Zielony  10%</span>
+            <div>
+               <span>Zielony </span>
+               <span id="twoHandedPoints">10</span>  
+               <span>%</span>
+            </div>
+            <span id="bows">Łuki</span>
+            <div>
+               <span>Zielony </span>
+               <span id="bowsPoints">10</span>  
+               <span>%</span>
+            </div>
+            <span id="crossbows">Kusze</span>
+            <div>
+               <span>Zielony </span>
+               <span id="crossbowsPoints">10</span>  
+               <span>%</span>
+            </div>
          </div>
          <div>
             <span id="Sneaking">Skradanie sie</span>
@@ -89,28 +105,28 @@
          </div>
       </div>
       <div class="statsLabel AddLvl">
-            <button class="AddButton">Zwiększ Poziom Postaci +1</button>
-            <button class="AddButton">Zwiększ Poziom Postaci +5</button>
+            <button data-attribute="lvl" data-value="1" class="AddButton">Zwiększ Poziom Postaci +1</button>
+            <button data-attribute="lvl" data-value="5" class="AddButton">Zwiększ Poziom Postaci +5</button>
       </div>
       <div class="statsLabel Uppgrading">
          <h2>Ulepszenia</h2>
          <div>
-            <button class="AddButton">Siła +1 (1 pkt. umiejętności)</button>
-            <button class="AddButton">Siła +5 (5 pkt. umiejętności)</button>
-            <button class="AddButton">Zręczność +1 (1 pkt. umiejętności)</button>
-            <button class="AddButton">Zręczność +5 (1 pkt. umiejętności)</button>
-            <button class="AddButton">Mana +1 (1 pkt. umiejętności)</button>
-            <button class="AddButton">Mana +5 (5 pkt. umiejętności)</button>
+            <button data-attribute="str" data-value="1" class="AddButton">Siła +1 (1 pkt. umiejętności)</button>
+            <button data-attribute="str" data-value="5" class="AddButton">Siła +5 (5 pkt. umiejętności)</button>
+            <button data-attribute="dex" data-value="1" class="AddButton">Zręczność +1 (1 pkt. umiejętności)</button>
+            <button data-attribute="dex" data-value="5" class="AddButton">Zręczność +5 (1 pkt. umiejętności)</button>
+            <button data-attribute="mana" data-value="1" class="AddButton">Mana +1 (1 pkt. umiejętności)</button>
+            <button data-attribute="mana" data-value="5" class="AddButton">Mana +5 (5 pkt. umiejętności)</button>
          </div>
          <div>
-            <button class="AddButton">Broń jednoręczna +1% (1 pkt. umiejętności)</button>
-            <button class="AddButton">Broń jednoręczna +5% (5 pkt. umiejętności)</button>
-            <button class="AddButton">Broń dwuręczna +1% (1 pkt. umiejętności)</button>
-            <button class="AddButton">Broń dwuręczna +5% (5 pkt. umiejętności)</button>
-            <button class="AddButton">Łuk +1% (1 pkt. umiejętności)</button>
-            <button class="AddButton">Łuk +5% (5 pkt. umiejętności)</button>
-            <button class="AddButton">Kusza +1% (1 pkt. umiejętności)</button>
-            <button class="AddButton">Kusza +5% (5 pkt. umiejętności)</button>
+            <button data-attribute="h1" data-value="1" class="AddButton">Broń jednoręczna +1% (1 pkt. umiejętności)</button>
+            <button data-attribute="h1" data-value="5" class="AddButton">Broń jednoręczna +5% (5 pkt. umiejętności)</button>
+            <button data-attribute="h2" data-value="1" class="AddButton">Broń dwuręczna +1% (1 pkt. umiejętności)</button>
+            <button data-attribute="h2" data-value="5" class="AddButton">Broń dwuręczna +5% (5 pkt. umiejętności)</button>
+            <button data-attribute="bow" data-value="1" class="AddButton">Łuk +1% (1 pkt. umiejętności)</button>
+            <button data-attribute="bow" data-value="5" class="AddButton">Łuk +5% (5 pkt. umiejętności)</button>
+            <button data-attribute="cbow" data-value="1" class="AddButton">Kusza +1% (1 pkt. umiejętności)</button>
+            <button data-attribute="cbow" data-value="5" class="AddButton">Kusza +5% (5 pkt. umiejętności)</button>
          </div>
      </div>
      <div class="equipment statsLabel">
@@ -127,7 +143,7 @@
      </div>
      <div class="results statsLabel">
       <h2>Podsumowanie</h2>
-         <button class="AddButton">Przeciwnik:</button>
+         <button class="AddButton">Przeciwnik</button>
      </div>
 
    </div>

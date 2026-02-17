@@ -111,36 +111,39 @@
       <div class="statsLabel Uppgrading">
          <h2>Ulepszenia</h2>
          <div>
-            <button data-attribute="str" data-value="1" class="AddButton">Siła +1 (1 pkt. umiejętności)</button>
-            <button data-attribute="str" data-value="5" class="AddButton">Siła +5 (5 pkt. umiejętności)</button>
-            <button data-attribute="dex" data-value="1" class="AddButton">Zręczność +1 (1 pkt. umiejętności)</button>
-            <button data-attribute="dex" data-value="5" class="AddButton">Zręczność +5 (1 pkt. umiejętności)</button>
-            <button data-attribute="mana" data-value="1" class="AddButton">Mana +1 (1 pkt. umiejętności)</button>
-            <button data-attribute="mana" data-value="5" class="AddButton">Mana +5 (5 pkt. umiejętności)</button>
+            <button data-attribute="str" data-value="1" class="AddButton">Siła +1 (<span id="strCost">1</span> pkt. umiejętności)</button>
+            <button data-attribute="str" data-value="5" class="AddButton">Siła +5 (<span id="strCost">5</span> pkt. umiejętności)</button>
+            <button data-attribute="dex" data-value="1" class="AddButton">Zręczność +1 (<span id="strCost">1</span> pkt. umiejętności)</button>
+            <button data-attribute="dex" data-value="5" class="AddButton">Zręczność +5 (<span id="strCost">5</span> pkt. umiejętności)</button>
+            <button data-attribute="mana" data-value="1" class="AddButton">Mana +1 (<span id="strCost">1</span> pkt. umiejętności)</button>
+            <button data-attribute="mana" data-value="5" class="AddButton">Mana +5 (<span id="strCost">5</span> pkt. umiejętności)</button>
          </div>
          <div>
-            <button data-attribute="h1" data-value="1" class="AddButton">Broń jednoręczna +1% (1 pkt. umiejętności)</button>
-            <button data-attribute="h1" data-value="5" class="AddButton">Broń jednoręczna +5% (5 pkt. umiejętności)</button>
-            <button data-attribute="h2" data-value="1" class="AddButton">Broń dwuręczna +1% (1 pkt. umiejętności)</button>
-            <button data-attribute="h2" data-value="5" class="AddButton">Broń dwuręczna +5% (5 pkt. umiejętności)</button>
-            <button data-attribute="bow" data-value="1" class="AddButton">Łuk +1% (1 pkt. umiejętności)</button>
-            <button data-attribute="bow" data-value="5" class="AddButton">Łuk +5% (5 pkt. umiejętności)</button>
-            <button data-attribute="cbow" data-value="1" class="AddButton">Kusza +1% (1 pkt. umiejętności)</button>
-            <button data-attribute="cbow" data-value="5" class="AddButton">Kusza +5% (5 pkt. umiejętności)</button>
+            <button data-attribute="h1" data-value="1" class="AddButton">Broń jednoręczna +1% (<span id="strCost">1</span> pkt. umiejętności)</button>
+            <button data-attribute="h1" data-value="5" class="AddButton">Broń jednoręczna +5% (<span id="strCost">5</span> pkt. umiejętności)</button>
+            <button data-attribute="h2" data-value="1" class="AddButton">Broń dwuręczna +1% (<span id="strCost">1</span> pkt. umiejętności)</button>
+            <button data-attribute="h2" data-value="5" class="AddButton">Broń dwuręczna +5% (<span id="strCost">5</span> pkt. umiejętności)</button>
+            <button data-attribute="bow" data-value="1" class="AddButton">Łuk +1% (<span id="strCost">1</span> pkt. umiejętności)</button>
+            <button data-attribute="bow" data-value="5" class="AddButton">Łuk +5% (<span id="strCost">5</span> pkt. umiejętności)</button>
+            <button data-attribute="cbow" data-value="1" class="AddButton">Kusza +1% (<span id="strCost">1</span> pkt. umiejętności)</button>
+            <button data-attribute="cbow" data-value="5" class="AddButton">Kusza +5% (<span id="strCost">5</span> pkt. umiejętności)</button>
          </div>
      </div>
      <div class="equipment statsLabel">
       <h2>Broń</h2>
-         <button class="AddButton">Brón jednoręczna</button>
-         <button class="AddButton">Brón dwuręczna</button>
-         <button class="AddButton">Łuk</button>
-         <button class="AddButton">Kusza</button>
-
+      <div id="weaponMenu">
+         <button data-attribute="1h" class="AddButton weapon">Brón jednoręczna</button>
+         <button data-attribute="2h" class="AddButton weapon">Brón dwuręczna</button>
+         <button data-attribute="bow" class="AddButton weapon">Łuk</button>
+         <button data-attribute="cbow" class="AddButton weapon">Kusza</button>
+      </div>
+      
          <div class="hidden" id="weaponList">
             <button class="AddButton" id="backButton">Wróć</button>
             <div id="weaponItems"></div>
          </div>
      </div>
+
      <div class="results statsLabel">
       <h2>Podsumowanie</h2>
          <button class="AddButton">Przeciwnik</button>

@@ -78,6 +78,9 @@ body {
 .Uppgrading, .equipment, .results{
   grid-column: 1 / -1;
   width: 100%;
+}
+
+.Uppgrading, .results{
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -106,4 +109,14 @@ body {
 
 .hidden {
     display: none !important;
+}
+
+#backButton {
+    position: absolute;
+}
+
+#weaponItems {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }

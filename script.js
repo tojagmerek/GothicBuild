@@ -96,12 +96,25 @@ document.querySelectorAll(".weapon").forEach((btn) => {
         const data = await res.json();
         const filtered = data.filter(item => item.hands === type);
 
-        weaponItems.innerHTML = filtered.map(item => `<button class="AddButton chooseWeapon" data-dmg="${item.damage}">${item.name} - DMG: ${item.damage}</button>`).join("");
+        weaponItems.innerHTML = filtered.map(item => `<button class="AddButton chooseWeapon" 
+        data-dmg="${item.damage}">${item.name} - DMG: ${item.damage}"
+        data-req-strength="${item.reqStrength}"
+        data-reg-dexterity="${item.reqDexterity}"
+        </button>`).join("");
 
         weaponItems.querySelectorAll(".chooseWeapon").forEach(btn => {
         btn.addEventListener("click", () => {
-            if(stats.str>=btn.dataset.)
-            state.weaponDmg = Number(btn.dataset.dmg);
+            const reqStr = Number(btn.dataset.reqStrength || 0);
+            const reqDex = Number(btn.dataset.reqDexterity || 0);
+
+            console.log("REQ:", { reqStr, reqDex, dataset: btn.dataset });
+
+            if(stats.str >= reqStr&&stats.dex >= reqDex){
+                state.weaponDmg = Number(btn.dataset.dmg);
+                console.log("OK");
+            } else {
+                console.log("Error");
+            } 
     });
     });
     });

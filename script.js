@@ -49,10 +49,12 @@ function setStats(key) {
     else if(stats[key]>=90) limits[key] = 4;
     else if(stats[key]>=60) limits[key] = 3;
     else if(stats[key]>=30) limits[key] = 2;
+    else limits[key] = 1;
 }
 
 function renderAll() {
-    keys.forEach(setStats)
+    keys.forEach(setStats);
+    finalResults();
 }
 
 document.querySelectorAll(".AddButton").forEach((btn) => {
@@ -109,12 +111,13 @@ document.querySelectorAll(".weapon").forEach((btn) => {
 
             console.log("REQ:", { reqStr, reqDex, dataset: btn.dataset });
 
-            if(stats.str >= reqStr&&stats.dex >= reqDex){
+            if((stats.str >= reqStr)&&(stats.dex >= reqDex)){
                 state.weaponDmg = Number(btn.dataset.dmg);
                 console.log("OK");
+                renderAll();
             } else {
                 console.log("Error");
-            } 
+            }
     });
     });
     });
@@ -125,10 +128,29 @@ backButton.addEventListener("click", () => {
     weaponMenu.classList.remove("hidden");
 });
 
+const finalDmg = document.getElementById("finalDmg");
+const finalDmgCrit = document.getElementById("finalDmgCrit");
+const medDmg = document.getElementById("md");
+const medToDef = document.getElementById("mtd")
 
+function finalResults() {
+    const mainAttribute = (stats.str > stats.dex) ? stats.str : stats.dex;
 
-function finalDmg() {
-    
+    let dmg = (state.weaponDmg + mainAttribute - 80)/10;
+    if (dmg < 5) dmg = 5;
+    let crit = dmg*10;
+
+    const mainWeaponStats = Math.max(stats.h1, stats.h2, stats.bow, stats.cbow);
+    const mainWeaponStatsFraction = mainWeaponStats / 100;
+
+    let md = (mainWeaponStatsFraction * crit) + ((1 - mainWeaponStatsFraction) * dmg);
+
+    let mtd = 300 / md;
+
+    finalDmg.textContent = dmg;
+    finalDmgCrit.textContent = crit;
+    medDmg.textContent = md;
+    medToDef.textContent = Math.round(mtd);
 }
 
 renderAll();

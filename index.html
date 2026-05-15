@@ -8,7 +8,9 @@
  </head>
  <body>
     <div class="stats">
-      <div id="Character" class="statsLabel">
+
+      <div class="left-side">
+         <div id="Character" class="statsLabel">
          <h2>Postać</h2>
          <div>
             <span id="guild">Brak przyn.</span>
@@ -55,6 +57,14 @@
             <span id="MagicProtectionPoints">0</span>
          </div>
       </div>
+      <div class="statsLabel AddLvl">
+            <button data-attribute="lvl" data-value="1" class="AddButton">Zwiększ Poziom Postaci +1</button>
+            <button data-attribute="lvl" data-value="5" class="AddButton">Zwiększ Poziom Postaci +5</button>
+      </div>
+   </div>
+
+   <div class="middle">
+
       <div id="Skills" class="statsLabel">
          <h2>Umiejętności</h2>
          <div>
@@ -104,10 +114,7 @@
             <span id="TrophyTakingPoints">-</span>
          </div>
       </div>
-      <div class="statsLabel AddLvl">
-            <button data-attribute="lvl" data-value="1" class="AddButton">Zwiększ Poziom Postaci +1</button>
-            <button data-attribute="lvl" data-value="5" class="AddButton">Zwiększ Poziom Postaci +5</button>
-      </div>
+      
       <div class="statsLabel Uppgrading">
          <h2>Ulepszenia</h2>
          <div>
@@ -129,7 +136,12 @@
             <button data-attribute="cbow" data-value="5" class="AddButton">Kusza +5% (<span id="strCost">5</span> pkt. umiejętności)</button>
          </div>
      </div>
-     <div class="equipment statsLabel">
+
+   </div>
+
+   <div class="right-side">
+      
+      <div class="equipment statsLabel">
       <h2>Broń</h2>
       <div id="weaponMenu">
          <button data-attribute="1h" class="AddButton weapon">Brón jednoręczna</button>
@@ -155,7 +167,7 @@
      </div>
 
    </div>
-      
+   </div>
     <script src="script.js"></script>
  </body>
  </html>

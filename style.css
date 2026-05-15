@@ -19,23 +19,48 @@ body {
     background-color: black;
     color: whitesmoke;
     font-size: 2.2rem;
-    background-image: url("assets/img/background.jpg");
+    background-image: url("assets/img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 100vw;
+    height: 100vh;
 }
 
 /* Menu main options */
 .stats {
-    padding: 4rem 0.5rem 0.2rem 4rem;
-    width: 50rem;
+    width: 100%;
+    height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0rem;
+    grid-template-columns: 1fr 1.5fr 1.2fr;
     align-items: start;
+    background-image: url("assets/img/frame.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    gap: 3%;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    margin: 25% 0 0 10%;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    margin: 20% 15% 0 0;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    margin: 16% 0 0 0;
 }
 
 .statsLabel {
     border: solid 1px goldenrod;
-    width: 40rem;
+    width: 100%;
     position: relative;
     padding: 2rem;
     margin: 3rem 1.5rem;
